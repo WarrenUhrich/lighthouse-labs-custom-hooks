@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import useLogChanges from '../hooks/useLogChanges';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 export default function BeersList() {
-    const [pageNumber, setPageNumber] = useState(localStorage.getItem('pageNumber'));
-    useEffect(()=>{
-        localStorage.setItem('pageNumber', pageNumber);
-    }, [pageNumber]);
-
+    const [pageNumber, setPageNumber] = useLocalStorage(
+        'pageNumber', // Key!
+        1 // Default / initial value!
+    );
     const [beers, status, error] = useFetch('https://api.punkapi.com/v2/beers?page='+pageNumber+'&per_page=16');
     useLogChanges(beers);
 
