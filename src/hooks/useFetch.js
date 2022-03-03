@@ -1,5 +1,10 @@
 import {useEffect, useState} from 'react';
 
+/**
+ * Uses JS' fetch function, and returns an array of response data, the fetching status, and the error (if applicable.)
+ * @param {string} url 
+ * @returns {array}
+ */
 export default function useFetch(url) {
     const [data, setData] = useState(null),
           [isPending, setIsPending] = useState(true),

@@ -7,6 +7,7 @@ export default function AnimeList() {
 
     return (
         <>
+            <h2>Anime List</h2>
             {error}
             {status && 'Loading...'}
             {animes && <ul>
