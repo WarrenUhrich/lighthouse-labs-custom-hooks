@@ -6,8 +6,8 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AnimeList />
     <BeersList />
+    <AnimeList />
   </React.StrictMode>,
   document.getElementById('root')
 );

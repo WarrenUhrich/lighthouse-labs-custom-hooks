@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import useLogChanges from '../hooks/useLogChanges';
 
 export default function BeersList() {
-    const [beers, status, error] = useFetch('https://api.punkapi.com/v2/beers?page=1&per_page=16');
+    const [pageNumber, setPageNumber] = useState(1);
+    const [beers, status, error] = useFetch('https://api.punkapi.com/v2/beers?page='+pageNumber+'&per_page=16');
     useLogChanges(beers);
 
     return (
         <>
-            <h2>Beers List</h2>
+            <h2>Beers List (Page {pageNumber})</h2>
+            {(pageNumber > 1) && <button onClick={e => {setPageNumber(pageNumber - 1)}}>Previous</button>}
+            <button onClick={e => {setPageNumber(pageNumber + 1)}}>Next</button>
             <ul>
                 {error && <li>{error}</li>}
                 {status && <li>{status}</li>}
