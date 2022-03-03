@@ -1,32 +1,16 @@
-import {useEffect, useState} from 'react';
+import useFetch from '../hooks/useFetch';
 
 export default function AnimeList() {
-    const [data, setData] = useState(null),
-          [isPending, setIsPending] = useState(true),
-          [errorMessage, setErrorMessage] = useState(false);
-
-    useEffect(() => {
-        fetch('https://ghibliapi.herokuapp.com/films')
-            .then(result => {
-                if(!result.ok) throw Error('Unable to fetch result.');
-                else return result.json();
-            })
-            .then(responseData => {
-                setData(responseData);
-                setIsPending(false);
-            })
-            .catch(error => {
-                setErrorMessage(error.message);
-                setIsPending(false);
-            });
-    }, []);
+    const [animes, status, error] = useFetch(
+        'https://ghibliapi.herokuapp.com/films'
+    );
 
     return (
         <>
-            {errorMessage}
-            {isPending && 'Loading...'}
-            {data && <ul>
-                {data.map(anime => <li>{anime.title} ({anime.original_title})</li>)}
+            {error}
+            {status && 'Loading...'}
+            {animes && <ul>
+                {animes.map(anime => <li key={anime.id}>{anime.title} ({anime.original_title})</li>)}
             </ul>}
         </>
     );
