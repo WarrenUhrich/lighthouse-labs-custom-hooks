@@ -9,7 +9,7 @@ const Counter = () => {
     useStateChangeLogger(count);
 
     return (
-        <button onClick={event => {setCount(prev => prev + 1)}}>
+        <button onClick={() => {setCount(prev => prev + 1)}}>
             Current Count: {count}
         </button>
     );
