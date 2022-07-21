@@ -1,12 +1,12 @@
-import {useState, useEffect } from 'react';
+import { useState } from 'react';
+import useStateChangeLogger from '../hooks/useStateChangeLogger';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
     // returns an array: [value, functionForUpdating()]
 
-    useEffect(() => {
-        console.log('Count is: ', count);
-    }, [count]);
+    // Custom hook! It console.logs changes to a piece of state.
+    useStateChangeLogger(count);
 
     return (
         <button onClick={event => {setCount(prev => prev + 1)}}>
