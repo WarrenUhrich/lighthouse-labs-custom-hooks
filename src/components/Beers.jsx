@@ -5,7 +5,7 @@ import useLocalStorage from '../hooks/useLocalStorage';
 const Beers = () => {
     const [page, setPage] = useLocalStorage('page', 1);
 
-    const [beers, setBeers, loading, error] = useFetch(`https://api.punksdfsdfapi.com/v2/beers?page=${page}&per_page=15`, 'json');
+    const [beers, setBeers, loading, error] = useFetch(`https://api.punkapi.com/v2/beers?page=${page}&per_page=15`, 'json');
     useStateChangeLogger(beers);
 
     return (
