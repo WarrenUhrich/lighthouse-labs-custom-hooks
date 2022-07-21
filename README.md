@@ -1,6 +1,6 @@
 # Lighthouse Labs | Custom Hooks
 
-[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-custom-hooks/tree/2022.07.21-flex-day-21march2022) | [Vimeo Video Recording (Coming Soon!)](https://vimeo.com/732228178/f0e36388a0)
+[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-custom-hooks/tree/2022.07.21-flex-day-21march2022) | [Vimeo Video Recording](https://vimeo.com/732228178/f0e36388a0)
 
 * [X] Hooks
 * [X] Custom Hooks
