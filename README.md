@@ -2,9 +2,15 @@
 
 * [X] What are Custom Hooks?
 * [ ] Example Custom Hooks!
-    * [ ] Toggle Hook -> `useToggle` -> state that can easily turn on and off
+    * [X] Toggle Hook -> `useToggle` -> state that can easily turn on and off
     1. Start by making a component that can toggle something...
     2. Refactor that code into a custom hook!
+    * [X] Update Title Hook -> `useUpdateTitle` -> changes document title
+    * [ ] Counter Hook -> `useCounter`
+    1. ✅ Keep track of a number
+    2. ✅ Increment the number
+        * Choose how much to increment the number by
+    3. ✅ Reset the number
 
 ## Custom Hooks!
 
