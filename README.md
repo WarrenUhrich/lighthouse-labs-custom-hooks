@@ -26,7 +26,12 @@ The React documentation specifies a few rules/ideas surrounding writing Custom H
 
 ## Example Hooks!
 
-### 1. "Toggle Hook" -> We want a re-usable state that can easily turn a value off/on || true/false.
+### [X] 1. "Toggle Hook" -> We want a re-usable state that can easily turn a value off/on || true/false.
 
-1. Start by making a compontent that can successfully toggle something...
+1. Start by making a component that can successfully toggle something...
 2. Refactor that functionality to exist in a custom hook.
+
+### [ ] 2. "Update Page Title Hook" -> We want to change the document title.
+
+1. Start by making a component that can change the web page's title (the text we see in the tab.)
+2. Refactor the core logic into a custom hook.
