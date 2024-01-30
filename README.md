@@ -1,7 +1,7 @@
 # Lighthouse Labs | Custom Hooks
 
 * [X] What are Custom Hooks?
-* [ ] Example Custom Hooks!
+* [X] Example Custom Hooks!
 
 ## To Explore Custom Hooks
 
@@ -31,7 +31,13 @@ The React documentation specifies a few rules/ideas surrounding writing Custom H
 1. Start by making a component that can successfully toggle something...
 2. Refactor that functionality to exist in a custom hook.
 
-### [ ] 2. "Update Page Title Hook" -> We want to change the document title.
+### [X] 2. "Update Page Title Hook" -> We want to change the document title.
 
 1. Start by making a component that can change the web page's title (the text we see in the tab.)
 2. Refactor the core logic into a custom hook.
+
+### [ ] 3. "Counter Hook" -> <Counter>
+
+1. Keep track of a number.
+2. Increment by 1. (Let the developer choose the increment.)
+3. Reset the number (to zero.)

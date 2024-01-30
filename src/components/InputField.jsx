@@ -1,28 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const InputField = () => {
-    const [title, setTitle] = useState('React App');
-
-    // document
-    //     .querySelector('input')
-    //     .addEventListener('change', (event) => {});
-
-    const handleChange = (event) => {
-        // Know WHICH element is changing...
-        const targetElement = event.target; // <INPUT>
-
-        // Get the value of the target <INPUT>
-        const currentElementValue = targetElement.value;
-
-        // Update state accordingly.
-        setTitle(currentElementValue);
-    };
-
-    // Use changing state to update the page title.
-    useEffect(() => { // Function that should run if a value changes.
-        // document.querySelector('title').textContent = title;
-        document.title = title;
-    }, [title]); // A list of values that might change.
+    // Order doesn't matter in object structuring...
+    // ...but NAMES do! This CAN make it easier
+    // to pull a specific value out of a large
+    // dataset! But it makes renaming/re-usability
+    // a bit harder.
+    const { handleChange, title } = usePageTitle();
 
     return (
         <section>
