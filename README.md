@@ -1,28 +1,30 @@
 # Lighthouse Labs | Custom Hooks
 
+[GitHub Repository Branch](https://github.com/WarrenUhrich/lighthouse-labs-custom-hooks/tree/2024.01.30-web-flex-day-18september2023) | [Vimeo Video Recording](https://vimeo.com/907987380/8df1377878?share=copy)
+
 * [X] What are Custom Hooks?
 * [X] Example Custom Hooks!
 
-## To Explore Custom Hooks
+### Custom Hooks
 
-So anytime we see that our code isn't very DRY... we want to break these re-used blocks of logic into re-usable functions!
+* From the [React Docs](https://react.dev/learn/reusing-logic-with-custom-hooks):
+> Building your own Hooks lets you extract component logic into reusable functions.
+* We can pull repetitive or complex code out of our components and move it into _custom hooks_
+* _Custom hooks_ are just JavaScript functions that can use React hooks
+* They must start with the prefix `use` so that React knows they are hooks
+* Multiple components using the same custom hook **do not share state**
 
-Often this takes the form of helper functions, that may store in separate files.
+```js
+// simple custom hook
+const useDocumentTitle = (title) => {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+};
 
-What are some examples of hooks you've used so far?
-
-* `useState`
-* `useReducer`
-* `useEffect`
-
-Custom Hooks are basically helper functions that make use of built-in React hooks.
-
-The React documentation specifies a few rules/ideas surrounding writing Custom Hooks:
-
-1. We are able to pull repetitive code, or complex code, in our components and move it into a re-usable function (custom hook.)
-2. Custom hooks are just JavaScript functions that use React hooks.
-3. They must start with the prefix `use` so that React and React developers know that these are/use hooks.
-4. Multiple components using the same custom hook ***do not*** share state.
+// inside of a component
+useDocumentTitle('My New Title');
+```
 
 ## Example Hooks!
 
@@ -36,7 +38,7 @@ The React documentation specifies a few rules/ideas surrounding writing Custom H
 1. Start by making a component that can change the web page's title (the text we see in the tab.)
 2. Refactor the core logic into a custom hook.
 
-### [ ] 3. "Counter Hook" -> <Counter>
+### [X] 3. "Counter Hook" -> <Counter>
 
 1. Keep track of a number.
 2. Increment by 1. (Let the developer choose the increment.)
