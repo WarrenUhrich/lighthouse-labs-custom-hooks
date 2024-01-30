@@ -1,6 +1,6 @@
 # Lighthouse Labs | Custom Hooks
 
-* [ ] What are Custom Hooks?
+* [X] What are Custom Hooks?
 * [ ] Example Custom Hooks!
 
 ## To Explore Custom Hooks
@@ -23,3 +23,10 @@ The React documentation specifies a few rules/ideas surrounding writing Custom H
 2. Custom hooks are just JavaScript functions that use React hooks.
 3. They must start with the prefix `use` so that React and React developers know that these are/use hooks.
 4. Multiple components using the same custom hook ***do not*** share state.
+
+## Example Hooks!
+
+### 1. "Toggle Hook" -> We want a re-usable state that can easily turn a value off/on || true/false.
+
+1. Start by making a compontent that can successfully toggle something...
+2. Refactor that functionality to exist in a custom hook.
