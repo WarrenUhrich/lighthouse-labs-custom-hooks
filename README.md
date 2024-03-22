@@ -43,3 +43,7 @@ useDocumentTitle('My New Title');
 1. Keep track of a number.
 2. Increment by 1. (Let the developer choose the increment.)
 3. Reset the number (to zero.)
+
+## Resources
+
+* [Reusing Logic with Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
